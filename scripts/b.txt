@@ -1,0 +1,4 @@
+    drag.active = false
+    interactingRef.current = false
+    // Redraw at full fidelity now that the interaction has settled.
+    requestDrawWithLabels()

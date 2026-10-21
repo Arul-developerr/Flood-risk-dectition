@@ -1,0 +1,94 @@
+/* Royal Burgundy · Tamil Nadu Flood Atlas. Exact anchor colors:
+   midnight #240D19, wine #401629, saffron #F5B544,
+   coral #FF6B55, ivory #FFF1D6, mauve #765265. */
+html:not(.light-mode) {
+  color-scheme: dark;
+  --navy-950: 36 13 25;
+  --navy-900: 43 16 31;
+  --navy-800: 64 22 41;
+  --navy-700: 76 31 53;
+  --navy-600: 94 49 71;
+  --cyan: 245 181 68;
+  --cyan-soft: 255 206 123;
+  --glacier: 255 206 123;
+  --glacier-soft: 255 223 158;
+  --teal-bright: 245 181 68;
+  --teal-brand: 245 181 68;
+  --shell-text: 255 241 214;
+  --shell-muted: 211 184 197;
+  --shell-faint: 187 153 170;
+  --shell-border: 118 82 101;
+  --risk-low: 187 161 170;
+  --risk-moderate: 245 181 68;
+  --risk-high: 255 145 96;
+  --risk-critical: 255 107 85;
+  --shadow-card: 0 12px 38px -22px #13020d;
+  --shadow-panel: 0 24px 65px -30px #13020d;
+  --shadow-glow: 0 0 0 1px #f5b5444d, 0 10px 34px -14px #f5b54466;
+  --shadow-glow-cyan: 0 0 0 1px #f5b5444d, 0 12px 40px -16px #f5b54466;
+  --terrain-deep: 36 13 25;
+  --terrain-low: 64 22 41;
+  --terrain-mid: 118 82 101;
+  --terrain-high: 245 181 68;
+  --terrain-ridge: 255 241 214;
+  --terrain-water: 255 107 85;
+}
+html.light-mode {
+  --navy-950: 255 241 214;
+  --navy-900: 249 230 202;
+  --navy-800: 255 248 234;
+  --navy-700: 250 237 217;
+  --navy-600: 231 210 196;
+  --cyan: 111 44 72;
+  --glacier: 111 44 72;
+  --teal-bright: 111 44 72;
+  --shell-text: 36 13 25;
+  --shell-muted: 89 56 72;
+  --shell-faint: 105 73 89;
+  --shell-border: 187 149 166;
+  --shadow-card: 0 14px 38px -28px #40162966;
+}
+html, body, .app-shell { background: rgb(var(--navy-950)); }
+.app-content { background: radial-gradient(circle at 68% -10%, #f5b54419, transparent 38%), #240d19; }
+html:not(.light-mode) .app-content { background: radial-gradient(circle at 68% -10%, #f5b54419, transparent 38%), #240d19; }
+html.light-mode .app-content { background: radial-gradient(circle at 68% -10%, #ff6b551c, transparent 38%), rgb(var(--navy-900)); }
+.sidebar-identity .brand-mark-bg { color: #f5b544; }
+.sidebar-identity .brand-mark-line { color: #240d19; }
+.sidebar nav a[aria-current="page"] { color: #f5b544; border-color: #f5b54473; background: #f5b5441c; }
+html:not(.light-mode) .sidebar nav a[aria-current="page"] { color: #f5b544; }
+.sidebar nav a[aria-current="page"] svg { color: #f5b544; }
+html.light-mode .sidebar nav a[aria-current="page"] { color: #6f2c48; }
+.sidebar-edition { background: #521d35; border-color: #765265; }
+.sidebar-edition { background-color: #521d35; }
+html:not(.light-mode) .sidebar-edition { background: #521d35; border-color: #765265; }
+html.light-mode .sidebar-edition { background: #f0dbc4; border-color: #bb95a6; }
+.tn-language-switch button[aria-pressed="true"] { background: #f5b544; color: #240d19; }
+.tn-page-hero .atlas-chapter > span:first-child,.tn-hero-english,.tn-page-hero .atlas-demo-stamp,.scene-identity p:first-child { color: #f5b544; }
+.tn-hero-map { color: #f5b544; opacity: .11; }
+.surface-panel { box-shadow: var(--shadow-card); }
+.btn-primary { background: #f5b544; color: #240d19; }
+.btn-primary:hover { background: #ffd079; }
+.btn-secondary:hover { border-color: #f5b544; }
+.region-chip.is-selected { border-color: #f5b544; background: #f5b5441c; color: #fff1d6; }
+.region-rail-heading > a,.text-link { color: #f5b544; }
+html:not(.light-mode) .region-rail-heading > a,html:not(.light-mode) .text-link { color: #f5b544; }
+html.light-mode .region-rail-heading > a,html.light-mode .text-link { color: #6f2c48; }
+.tn-map-stage { background: radial-gradient(ellipse at 47% 45%,#f7e4bd 0,#ecd0b1 55%,#d8b7a8 100%); }
+html:not(.light-mode) .tn-map-stage { background: radial-gradient(ellipse at 47% 45%,#6b2c45 0,#401629 60%,#240d19 100%); }
+.tn-map-grid { background-image: linear-gradient(#f5b5441a 1px,transparent 1px),linear-gradient(90deg,#f5b5441a 1px,transparent 1px); }
+.tn-map-compass { color: #f5b544; }
+.tn-map-ocean { color: #d3b8c5; }
+.tn-map-object { filter: drop-shadow(25px 29px 15px #11030a99); }
+.tn-map-face { filter: drop-shadow(0 0 2px #ffe6ac); }
+.tn-map-pin { color: #fff1d6; }
+.tn-map-pin i { border-color: #fff1d6; box-shadow: 0 0 0 4px #240d1988, 0 2px 6px #13020d; }
+.tn-map-pin span { color: #fff1d6; background: #240d19dc; }
+.tn-map-pin.is-selected i { box-shadow: 0 0 0 6px #f5b54480; }
+.tn-map-pin.is-selected span,.tn-map-pin:hover span,.tn-map-pin:focus-visible span { background: #f5b544; color: #240d19; }
+.tn-map-credit { color: #6a3951; }
+html:not(.light-mode) .tn-map-credit,html:not(.light-mode) .tn-map-ocean { color: #d3b8c5; }
+.preparation-progress-card { background: #ead3b7; }
+html:not(.light-mode) .preparation-progress-card { background: #57233a; }
+.preparation-dial,.lens-summary strong { color: #f5b544; }
+html.light-mode .preparation-dial,html.light-mode .lens-summary strong { color: #6f2c48; }
+@media(max-width:420px) { .topbar-appearance { display: none; } }

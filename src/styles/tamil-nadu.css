@@ -1,0 +1,121 @@
+/* Tamil Nadu Flood Atlas — accessible, Tamil-first cartographic interface. */
+html.light-mode { --navy-950: 248 247 242; --navy-900: 243 241 233; --navy-800: 255 254 250; --navy-700: 250 248 240; --navy-600: 237 234 224; --cyan: 9 109 105; --glacier: 12 108 126; --teal-bright: 7 132 110; --shell-text: 28 42 44; --shell-muted: 76 92 93; --shell-faint: 91 107 107; --shell-border: 211 218 209; --shadow-card: 0 10px 36px -26px #1b3b3a44; }
+html:not(.light-mode) { --navy-950: 14 31 35; --navy-900: 18 39 43; --navy-800: 25 50 54; --navy-700: 35 65 69; --navy-600: 48 80 83; --cyan: 133 218 198; --glacier: 112 192 206; --teal-bright: 127 213 178; --shell-text: 246 246 232; --shell-muted: 183 202 193; --shell-faint: 159 184 175; --shell-border: 64 96 97; }
+html { background: rgb(var(--navy-900)); }
+body { font-family: 'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; background: rgb(var(--navy-900)); color: rgb(var(--shell-text)); }
+body:lang(en) { font-family: 'Plus Jakarta Sans',sans-serif; }
+.app-shell { background: rgb(var(--navy-900)); }
+.app-content { background: radial-gradient(circle at 70% -10%,#f2d8c95c,transparent 38%), rgb(var(--navy-900)); }
+html:not(.light-mode) .app-content { background: radial-gradient(circle at 70% -10%,#ca845024,transparent 38%), rgb(var(--navy-900)); }
+.sidebar-dock { padding: 0; }
+.sidebar-dock .sidebar { width: 250px; height: 100vh; border: 0; border-right: 1px solid rgb(var(--shell-border)); border-radius: 0; box-shadow: none; }
+.sidebar { background: rgb(var(--navy-800)); }
+.sidebar-identity { min-height: 112px; align-items: center; padding-inline: 25px; border-bottom: 1px solid rgb(var(--shell-border)/.65); }
+.sidebar-identity .brand-mark-bg { color: #d66c4a; }
+.sidebar-identity .brand-mark-line { color: white; }
+.atlas-wordmark p { font-family: 'Noto Sans Tamil',sans-serif; font-size: 19px; letter-spacing: -.04em; white-space: nowrap; }
+.atlas-wordmark small { font: 9px 'Plus Jakarta Sans',sans-serif; letter-spacing: .05em; color: rgb(var(--shell-muted)); margin-top: 5px; }
+.sidebar nav { padding-top: 18px; }
+.sidebar-group > p { font: 10px 'Plus Jakarta Sans',sans-serif; letter-spacing: .04em; color: rgb(var(--shell-faint)); }
+.sidebar nav a { min-height: 46px; border-radius: 12px; font-size: 13px; }
+.sidebar nav a[aria-current="page"] { background: #d66c4a17; border-color: #d66c4a55; color: #ad4f34; }
+.sidebar nav a[aria-current="page"] svg { color: #c46040; }
+html:not(.light-mode) .sidebar nav a[aria-current="page"] { color: #ffc0a0; }
+.sidebar-edition { background: #f0eee4; border-color: #e0e0d3; }
+html:not(.light-mode) .sidebar-edition { background: #274346; border-color: #4d6d6e; }
+.sidebar-edition .contour-art { display: none; }
+.top-command-bar { background: rgb(var(--navy-800)/.95); border-color: rgb(var(--shell-border)); }
+.top-command-bar > div { height: 78px; }
+.tn-language-switch { display: inline-flex; flex: none; gap: 2px; padding: 3px; border: 1px solid rgb(var(--shell-border)); border-radius: 11px; background: rgb(var(--navy-900)); }
+.tn-language-switch button { min-width: 41px; min-height: 34px; padding: 2px 7px; color: rgb(var(--shell-muted)); font-size: 11px; }
+.tn-language-switch button[aria-pressed="true"] { color: white; background: #bc6042; }
+.atlas-page { gap: 30px; }
+.tn-page-hero { min-height: 222px; padding-block: 32px 35px; border-bottom: 1px solid rgb(var(--shell-border)); }
+.tn-page-hero .atlas-chapter { font: 10px 'DM Mono',monospace; letter-spacing: .04em; }
+.tn-page-hero .atlas-chapter > span:first-child { color: #bd6042; }
+.tn-page-hero .display-title { max-width: 770px; font-family: 'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; font-size: clamp(28px,3vw,50px); font-weight: 700; line-height: 1.35; letter-spacing: -.045em; }
+.overview-workspace .tn-page-hero .display-title { font-size: clamp(35px,3.6vw,58px); line-height: 1.28; }
+.tn-page-hero .atlas-description { max-width: 620px; margin-top: 10px; font-size: 13px; line-height: 1.95; }
+.tn-hero-english { margin-top: 12px; font: 11px 'Plus Jakarta Sans',sans-serif; letter-spacing: .04em; color: #b86043; }
+.tn-hero-map { width: 170px; height: 200px; inset: auto 215px 10px auto; opacity: .10; mask-image: none; }
+.tn-hero-map svg { width: 100%; height: 100%; }
+.tn-page-hero .atlas-demo-stamp { color: #b95b3c; }
+.tn-page-hero .atlas-reference strong { font-family: 'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; font-size: 16px; font-weight: 700; line-height: 1.45; }
+.tn-page-hero .atlas-reference small { color: rgb(var(--shell-muted)); }
+.surface-panel { background: rgb(var(--navy-800)); border-color: rgb(var(--shell-border)); border-radius: 20px; box-shadow: 0 12px 34px -29px #22474988; }
+.btn-primary { background: #bd6042; color: #fff; }
+.btn-primary:hover { background: #aa4e33; }
+.btn-secondary { background: rgb(var(--navy-800)); border: 1px solid rgb(var(--shell-border)); }
+.btn-secondary:hover { background: rgb(var(--navy-700)); border-color: #bd6042; }
+.region-chip { min-height: 46px; padding: 8px 13px; background: rgb(var(--navy-800)); border-color: rgb(var(--shell-border)); }
+.region-chip.is-selected { border-color: #bd6042; background: #bd604214; color: rgb(var(--shell-text)); }
+.region-chip-number,.atlas-section-heading .overline,.metric-value,.summary-item > p:nth-child(2) { font-family: 'DM Mono',monospace; }
+.region-rail-heading { font-size: 12px; }
+.region-rail-heading > a,.text-link { color: #ac5238; }
+html:not(.light-mode) .region-rail-heading > a, html:not(.light-mode) .text-link { color: #f3a884; }
+.basin-workbench { background: rgb(var(--navy-800)); border-color: rgb(var(--shell-border)); border-radius: 22px; }
+.basin-workbench-grid .terrain-frame { height: 530px; }
+.terrain-stage { background: rgb(var(--navy-950)); }
+.scene-identity { z-index: 5; }
+.scene-identity p:first-child { color: #b65e40; }
+.tn-map-stage { position: relative; isolation: isolate; width: 100%; overflow: hidden; border: 0; background: radial-gradient(ellipse at 47% 45%,#e7e4d3 0,#d5e2df 55%,#c6dbdc 100%); cursor: grab; touch-action: pan-y; perspective: 1100px; }
+html:not(.light-mode) .tn-map-stage { background: radial-gradient(ellipse at 47% 45%,#32595c 0,#17383e 60%,#10282e 100%); }
+.tn-map-stage:active { cursor: grabbing; }
+.tn-map-grid { position: absolute; inset: 0; background-image: linear-gradient(#45817e21 1px,transparent 1px),linear-gradient(90deg,#45817e21 1px,transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(ellipse,#000 20%,transparent 83%); }
+.tn-map-compass { position: absolute; top: 22px; right: 78px; z-index: 2; font: 12px 'DM Mono',monospace; color: #566e6b; display: grid; justify-items: center; }
+.tn-map-compass i { display: block; width: 1px; height: 32px; margin-top: 5px; background: currentColor; }
+.tn-map-ocean { position: absolute; right: 9%; bottom: 16%; color: #668d92; font: 10px 'DM Mono',monospace; letter-spacing: .18em; writing-mode: vertical-rl; }
+.tn-map-ocean span { font-family: 'Noto Sans Tamil',sans-serif; letter-spacing: 0; margin-top: 5px; }
+.tn-map-object { position: absolute; width: min(78%,470px); aspect-ratio: 560 / 640; left: 50%; top: 50%; transform-style: preserve-3d; will-change: transform; filter: drop-shadow(25px 29px 15px #2c5c5d4d); transition: transform .26s ease-out; }
+.tn-map-depth,.tn-map-face,.tn-map-pins { position: absolute; width: 100%; height: 100%; inset: 0; overflow: visible; }
+.tn-map-depth { transform-style: preserve-3d; }
+.tn-map-face { transform: translateZ(3px); filter: drop-shadow(0 0 2px #bce3d1); }
+.tn-map-pins { transform: translateZ(15px); pointer-events: none; }
+.tn-map-pin { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 2px; width: 112px; min-height: 36px; padding: 0; transform: translate(-50%,-50%); pointer-events: auto; color: #133b3b; text-align: center; }
+.tn-map-pin i { display: block; width: 15px; height: 15px; border: 3px solid #fff; border-radius: 50%; background: var(--pin-color); box-shadow: 0 0 0 4px #224d4f55, 0 2px 6px #0b313b88; }
+.tn-map-pin span { max-width: 110px; padding: 3px 5px; border-radius: 5px; color: white; background: #15383cc9; font: 10px 'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; white-space: nowrap; }
+.tn-map-pin:not(.is-selected) span { opacity: 0; visibility: hidden; }
+.tn-map-pin:hover span,.tn-map-pin:focus-visible span { opacity: 1; visibility: visible; }
+.tn-map-pin.is-selected { z-index: 3; }
+.tn-map-pin.is-selected i { width: 19px; height: 19px; box-shadow: 0 0 0 6px #d86d4970; }
+.tn-map-pin.is-selected span { background: #a64d34; }
+.tn-map-pin:hover span,.tn-map-pin:focus-visible span { background: #a64d34; }
+.tn-map-credit { position: absolute; left: 16px; bottom: 10px; z-index: 2; max-width: 70%; color: #345d60; font-size: 9px; line-height: 1.6; }
+html:not(.light-mode) .tn-map-credit,html:not(.light-mode) .tn-map-ocean { color: #b5d4d3; }
+.scene-caption { background: rgb(var(--navy-800)/.8); }
+.atlas-page--risk .tn-map-stage,.atlas-page--stations .tn-map-stage { min-height: 560px; }
+.metric-grid > div { background: rgb(var(--navy-800)); border-color: rgb(var(--shell-border)); }
+.chart-panel { background: rgb(var(--navy-800)); }
+.preparation-progress-card { background: #d7eee8; }
+html:not(.light-mode) .preparation-progress-card { background: #284d50; }
+.preparation-dial,.lens-summary strong { color: #b75b3f; }
+.preparation-guidance { background: rgb(var(--navy-800)); }
+.preparation-phase { border-color: rgb(var(--shell-border)); }
+.preparation-phase.is-open { background: rgb(var(--navy-800)); }
+.preparation-phase-trigger strong,.atlas-section-heading h2,.section-title { font-family: 'Noto Sans Tamil','Plus Jakarta Sans',sans-serif; }
+.resource-chapter-grid,.observation-grid { align-items: stretch; }
+.atlas-page [data-panel="footnote"] { color: rgb(var(--shell-muted)); }
+.app-shell footer { background: rgb(var(--navy-800)); }
+@media(max-width:1279px) { .sidebar-dock .sidebar { width: 220px; } .tn-map-object { width: min(78%,435px); } }
+@media(max-width:1023px) { .tn-page-hero { min-height: 0; } .tn-hero-map { display: none; } }
+@media(max-width:767px) {
+  .top-command-bar > div { height: 72px; }
+  .top-command-bar .tn-language-switch { margin-left: auto; }
+  .tn-language-switch button { min-width: 36px; padding-inline: 4px; font-size: 9px; }
+  .tn-page-hero { padding-block: 24px; }
+  .tn-page-hero .display-title,.overview-workspace .tn-page-hero .display-title { font-size: clamp(25px,7vw,37px); line-height: 1.38; }
+  .tn-page-hero .atlas-description { font-size: 12px; line-height: 1.8; }
+  .tn-page-hero .atlas-reference strong { font-size: 12px; }
+  .tn-map-object { width: min(85%,380px); }
+  .tn-map-pin { width: 75px; }
+  .tn-map-pin span { max-width: 75px; overflow: hidden; text-overflow: ellipsis; font-size: 8px; }
+  .tn-map-ocean { right: 3%; bottom: 22%; font-size: 8px; }
+  .tn-map-credit { font-size: 8px; }
+  .tn-map-compass { right: 60px; }
+  .basin-workbench-grid .tn-map-stage { height: 480px !important; }
+  .atlas-page--risk .tn-map-stage,.atlas-page--stations .tn-map-stage { min-height: 500px; }
+  .atlas-page--risk .terrain-label { visibility: visible; }
+}
+@media(max-width:380px) { .topbar-appearance,.topbar-alerts { display: none; } .top-command-bar > div { padding-inline: 12px; } .tn-page-hero .display-title { overflow-wrap: anywhere; } .tn-map-object { width: 85%; } .tn-map-pin span { display: none; } .tn-map-pin.is-selected span { display: block; } .tn-map-credit { max-width: 58%; } }
+@media(prefers-reduced-motion:reduce) { .tn-map-object { transition: none; } }
+html.reduce-motion .tn-map-object { transition: none; }
